@@ -1,0 +1,265 @@
+    <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - AI FITRIA ADINDA SARI</title>
+    <!-- Mengambil font modern mirip di gambar -->
+    <link href="" rel="stylesheet">
+    
+    
+    <style>
+        /* RESET & BASE STYLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #1e1e24;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* HEADER & NAVIGATION */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 10%;
+            background-color: #ffffff;
+        }
+
+        .navbar .logo {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: #6320ee; /* Ungu brand logo */
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555555;
+            font-size: 0.95rem;
+            font-weight: 400;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #6320ee;
+        }
+
+        /* HERO LAYOUT */
+        .hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px 10%;
+            flex: 1;
+        }
+
+        /* KONTEN TEKS (KIRI) */
+        .hero-content {
+            max-width: 550px;
+        }
+
+        .greeting {
+            font-size: 1.15rem;
+            color: #6320ee;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .name {
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: #111111;
+            line-height: 1.15;
+            margin-bottom: 15px;
+        }
+
+        .job-title {
+            font-size: 1.15rem;
+            font-weight: 400;
+            color: #333333;
+            margin-bottom: 30px;
+        }
+
+        .job-title .company {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            font-weight: 500;
+        }
+
+        .description {
+            font-size: 1rem;
+            color: #777777;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .btn-hubungi {
+            background-color: #6320ee;
+            color: #ffffff;
+            border: none;
+            padding: 14px 32px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        .btn-hubungi:hover {
+            background-color: #4f15c7;
+            transform: translateY(-1px);
+        }
+
+        /* KONTEN VISUAL FOTO (KANAN) */
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding-bottom: 40px;
+        }
+
+        /* Lingkaran latar belakang ungu */
+        .avatar-bg {
+            width: 360px;
+            height: 360px;
+            background-color: #7d42f4;
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        /* Pengaturan gambar orang agar memotong/keluar lingkaran secara estetik */
+        .avatar-img {
+            height: 100%; 
+            width: 125%;
+            position: absolute;
+            bottom: 0;
+            object-fit: contain;
+        }
+
+        /* TOMBOL SCROLL UP (KANAN BAWAH) */
+        .scroll-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background-color: #6320ee;
+            border: none;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(99, 32, 238, 0.3);
+            transition: background-color 0.2s;
+        }
+
+        .scroll-top:hover {
+            background-color: #4f15c7;
+        }
+
+        .scroll-top svg {
+            width: 20px;
+            height: 20px;
+            fill: none;
+            stroke: #ffffff;
+            stroke-width: 2.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        /* RESPONSIVE: TAMPILAN PADA LAYAR KECIL / HP */
+        @media (max-width: 992px) {
+            .navbar {
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px 25px;
+            }
+            .hero-section {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 40px 20px;
+                gap: 50px;
+            }
+            .name {
+                font-size: 2.5rem;
+            }
+            .avatar-bg {
+                width: 280px;
+                height: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGASI ATAS -->
+    <header class="navbar">
+        <div class="logo">AI FITRIA ADINDA SARI</div>
+        <nav class="nav-links">
+            <a href="#" class="active">Beranda</a>
+            <a href="#">Tentang Saya</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Pendidikan</a>
+            <a href="#">Pengalaman</a>
+            <a href="#">Blog</a>
+            <a href="#">Kontak</a>
+        </nav>
+    </header>
+
+    <!-- KONTEN UTAMA HERO -->
+    <main class="hero-section">
+        <!-- Blok Kiri -->
+        <div class="hero-content">
+            <p class="greeting">Halo Semua 👋 , Saya</p>
+            <h1 class="name">AI FITRIA ADINDA SARI</h1>
+            <p class="job-title">IT Programmer <span class="company">PT BRIngin Sejahtera Makmur</span></p>
+            <p class="description">
+                Portofolio ini menampilkan proyek dan kontribusi saya sebagai pengembang di bidang teknologi.
+            </p>
+            <button class="btn-hubungi">Hubungi Saya</button>
+        </div>
+
+        <!-- Blok Kanan -->
+        <div class="hero-visual">
+            <div class="avatar-bg">
+                <!-- Ganti link gambar di bawah ini dengan file foto Anda sendiri yang sudah berlatar belakang transparan (PNG) -->
+    <link href="" rel="stylesheet">
+                <img src="assets/img/jht.jpg" alt="Ai FITRIA ADINDA SARI" class="avatar-img">
+            </div>
+        </div>
+    </main>
+
+    <!-- TOMBOL PANAH ATAS -->
+    <button class="scroll-top" aria-label="Scroll to top">
+        <svg viewBox="0 0 24 24">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+</body>
+</html>

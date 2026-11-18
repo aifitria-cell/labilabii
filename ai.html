@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portofolio - Nama Saya</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f1f5f9;
+            color: #333;
+        }
+
+        /* NAVBAR */
+        nav {
+            background-color: #0f172a;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav h2 {
+            color: white;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        /* HOME */
+        #home {
+            min-height: 90vh;
+            background: linear-gradient(135deg, #0f172a, #2563eb);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+        }
+
+        /* FOTO PROFIL */
+        .foto-profil {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #38bdf8;
+            margin-bottom: 20px;
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.5);
+        }
+
+        .home-content h1 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        .home-content span {
+            color: #38bdf8;
+        }
+
+        .home-content p {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #38bdf8;
+            color: #0f172a;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: white;
+        }
+
+        /* SECTION */
+        section {
+            padding: 70px 10%;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #0f172a;
+        }
+
+        /* TENTANG */
+        .tentang {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        /* BIODATA */
+        .biodata {
+            max-width: 600px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .biodata p {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .biodata b {
+            display: inline-block;
+            width: 130px;
+            color: #2563eb;
+        }
+
+        /* SKILL */
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .skill {
+            background-color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .skill h3 {
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        /* PROJECT */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .project {
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .project h3 {
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            line-height: 1.6;
+        }
+
+        /* KONTAK */
+        .kontak {
+            text-align: center;
+            line-height: 2;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .home-content h1 {
+                font-size: 32px;
+            }
+
+            .skills,
+            .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <h2>Portofolio Saya</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#tentang">Tentang</a></li>
+            <li><a href="#biodata">Biodata</a></li>
+            <li><a href="#skill">Skill</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HOME -->
+    <section id="home">
+
+        <div class="home-content">
+
+            <!-- FOTO PROFIL -->
+            <img 
+                src="assets/img/jht.jpg" 
+                alt="Foto Profil Saya" 
+                class="foto-profil"
+            >
+
+            <h1>Halo, Saya <span>ai fitria adinda sari</span></h1>
+
+            <p>
+                Pelajar | Web Developer | Desainer
+            </p>
+
+            <a href="#tentang" class="btn">
+                Kenali Saya
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- TENTANG SAYA -->
+    <section id="tentang">
+
+        <h2>Tentang Saya</h2>
+
+        <div class="tentang">
+
+            <p>
+                Halo! Nama saya <b>ai fitria adinda sari</b>.
+                Saya adalah seorang pelajar yang tertarik dengan
+                dunia teknologi, pemrograman, dan desain website.
+            </p>
+
+            <br>
+
+            <p>
+                Saya senang mempelajari hal-hal baru dan membuat
+                berbagai project menggunakan HTML, CSS, dan JavaScript.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- BIODATA -->
+    <section id="biodata">
+
+        <h2>Biodata Saya</h2>
+
+        <div class="biodata">
+
+            <p>
+                <b>Nama</b> : ai fitria adinda sari
+
+            <p>
+                <b>Tempat Lahir</b> : lamping
+            <p>
+                <b>Tanggal Lahir</b> : 26 juni 2010
+
+            <p>
+                <b>Sekolah</b> : smkn1rongga
+            <p>
+                <b>Jurusan</b> : Rekayasa Perangkat Lunak
+            </p>
+
+            <p>
+                <b>Hobi</b> : main,mekeup
+
+            <p>
+                <b>Alamat</b> : rongga 
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILL -->
+    <section id="skill">
+
+        <h2>Skill Saya</h2>
+
+        <div class="skills">
+
+            <div class="skill">
+                <h3>HTML</h3>
+                <p>
+                    Membuat struktur website menggunakan HTML.
+                </p>
+            </div>
+
+            <div class="skill">
+                <h3>CSS</h3>
+                <p>
+                    Membuat tampilan website menjadi menarik dan responsif.
+                </p>
+            </div>
+
+            <div class="skill">
+                <h3>JavaScript</h3>
+                <p>
+                    Membuat website menjadi lebih interaktif.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECT -->
+    <section id="project">
+
+        <h2>Project Saya</h2>
+
+        <div class="projects">
+
+            <div class="project">
+                <h3>Website Sekolah</h3>
+
+                <p>
+                    Website sederhana yang berisi informasi
+                    mengenai sekolah dan kegiatan sekolah.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Website Toko</h3>
+
+                <p>
+                    Website toko sederhana yang dibuat menggunakan
+                    HTML dan CSS.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Portofolio Pribadi</h3>
+
+                <p>
+                    Website pribadi untuk menampilkan profil,
+                    skill, dan project yang pernah dibuat.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- KONTAK -->
+    <section id="kontak">
+
+        <h2>Kontak Saya</h2>
+
+        <div class="kontak">
+
+            <p>📧 Email: aifitria@gmail.com</p>
+
+            <p>📱 WhatsApp: 082273484754</p>
+
+            <p>📷 Instagram: @aiifitria</p>
+
+            <p>📍 Lokasi: Bandung barat, Jawa Barat</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 AI FITRIA | Portofolio Pribadi
+        </p>
+
+    </footer>
+
+</body>
+</html>

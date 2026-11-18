@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+    pandding: 0;
+}
+
+.banner-atas {
+    background-color: aquamarine;
+    color:bisque(0, 0, 0);
+    pandding: 10px 0;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+.banner-atas h3 {
+    margin-top: auto;
+    font-family: Cambria;
+    display: flex;
+    align-content: space-between;
+    align-items: flex-start;
+}
